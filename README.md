@@ -34,13 +34,7 @@ Streamlit
 
 
 
-How to Run
-git clone https://github.com/Shivaganesh7/Intelligent-SQL-ML-Engine.git
-cd Intelligent-SQL-ML-Engine
-pip install -r requirements.txt
-streamlit run ui/app.py
 
----
 
 ## 📸 Demo
 
