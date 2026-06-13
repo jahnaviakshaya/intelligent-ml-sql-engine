@@ -1,0 +1,92 @@
+# 🧠 Intelligent SQL-ML Engine  
+![Python](https://img.shields.io/badge/Python-3.9-blue)
+![ML](https://img.shields.io/badge/Machine%20Learning-Enabled-green)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen)
+
+**In-Database Machine Learning using SQL-Based Predictions**
+
+---
+
+## 🚀 Overview
+This project enables **machine learning directly inside SQL queries** using a custom `PREDICT(failure)` operator. It eliminates data movement to external systems and enables **real-time, explainable, and cost-aware analytics** within the database.
+
+---
+
+## ❗ Problem
+Traditional ML pipelines:
+- Move data outside databases → latency  
+- Require separate ML infrastructure  
+- Lack real-time decision-making  
+
+---
+
+## 💡 Solution
+A middleware-driven system that:
+- Converts **Decision Tree → SQL `CASE` logic**  
+- Executes predictions directly inside the database  
+- Uses **Reinforcement Learning (PER-DQN)** for cost optimization  
+- Provides **Explainable AI (SHAP)**  
+
+---
+
+## 🏗️ System Architecture
+![Architecture](assets/architecture.png)
+
+---
+
+## ⚙️ Key Features
+- SQL-based ML (`PREDICT()` operator)  
+- In-database inference  
+- Decision Tree → SQL conversion  
+- Cost-Based Optimization (CBO)  
+- Reinforcement Learning (PER-DQN)  
+- Explainable AI (SHAP)  
+- Interactive Streamlit UI  
+
+---
+
+## 🤖 Reinforcement Learning Workflow
+
+The system uses **Double DQN with Prioritized Experience Replay (PER)** for cost-aware maintenance decision-making.
+
+![RL Workflow](assets/rl_workflow.png)
+
+### 🔍 RL Logic
+- **State**: Machine condition + failure probability  
+- **Actions**: Maintain / Replace / Do Nothing  
+- **Reward**: Cost-based optimization  
+- **Goal**: Minimize long-term maintenance cost  
+
+---
+
+## 📊 Results
+- **Accuracy**: ~98% (Gradient Boosting benchmark)  
+- **Cost Reduction**: **~24%** (23420 → 17760)  
+- **Key Influencing Features**: Torque, Tool Wear  
+
+---
+
+## 🧪 Tech Stack
+- Python  
+- SQLite  
+- scikit-learn  
+- PyTorch  
+- SHAP  
+- Streamlit  
+
+---
+
+## ▶️ How to Run
+
+```bash
+git clone https://github.com/Shivaganesh7/Intelligent-SQL-ML-Engine.git
+cd Intelligent-SQL-ML-Engine
+pip install -r requirements.txt
+streamlit run ui/app.py
+
+---
+
+## 📸 Demo
+
+### Streamlit Application Output
+![Demo](assets/demo.png)
